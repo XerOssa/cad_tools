@@ -17,8 +17,11 @@ def read_coordinates(file_path: str) -> List[Tuple[int, float, float, float, str
         content = stream.read()
         cleaned_lines = ["\t".join(line.split()) for line in content.split('\n')]
         measurements.extend(cleaned_lines)
-    return [(int(''.join(filter(str.isdigit, line.split('\t')[0]))), float(line.split('\t')[2]), float(line.split('\t')[1]),
-             float(line.split('\t')[3]), str(line.split('\t')[4])) for line in measurements if len(line) > 3]
+    return [(int(''.join(filter(str.isdigit, line.split('\t')[0]))), 
+             float(line.split('\t')[2]), 
+             float(line.split('\t')[1]),
+             float(line.split('\t')[3]), 
+             str(line.split('\t')[4])) for line in measurements if len(line) > 3]
 
 
 def create_dxf_file(points: List[Tuple[int, float, float, float, str]], output_dxf_path: str, skipped_pairs: List[Tuple[int,int]]) -> List[Tuple[int,int]]:

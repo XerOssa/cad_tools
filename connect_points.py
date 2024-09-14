@@ -41,8 +41,8 @@ def connect_points_with_lwpolyline(points: List[Tuple[int, float, float, float, 
         msp.add_lwpolyline(polyline, dxfattribs={'layer': 'connect_points'})
 
 if __name__ == "__main__":
-    input_file_path = 'D:/ROBOTA/GEOPARTNER/dom/MDCP/chalupa/240502DOMamster.txt'
-    output_dxf_path = 'D:/ROBOTA/GEOPARTNER/dom/MDCP/chalupa/240502DOM2.dxf'
+    input_file_path = 'D:/ROBOTA/GEOPARTNER/dom/GRAN TG.txt'
+    output_dxf_path = 'D:/ROBOTA/GEOPARTNER/dom/gran_tg.dxf'
 
     # Read coordinates
     points = read_coordinates(input_file_path)
